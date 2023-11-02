@@ -1,3 +1,11 @@
 body {
     background:wheat;
+    overflow: hidden;
+}
+
+.bibi{
+    border-style:groove;
+    border-color: black;
+    border-width: 50px;
+    
 }

@@ -8,7 +8,7 @@ from dataclasses import dataclass
 def home(
     request: HttpRequest,
 ) -> HttpResponse:
-    teams = ["Management", "Procurement", "Community", "Documentation"]
+    teams = ["management", "procurement", "community", "documentation"]
 
     context = {"teams": teams}
 
@@ -57,16 +57,16 @@ Team_dict = {
 
 
 def to_teams(request: HttpRequest, team_num: str) -> HttpResponse:
-    if team_num == "Management":
+    if team_num == "management":
         context1 = {"team": Team_dict["management"]}
         return render(request, "details.html", context1)
-    elif team_num == "Procurement":
+    elif team_num == "procurement":
         context2 = {"team": Team_dict["procurement"]}
         return render(request, "details.html", context2)
-    elif team_num == "Community":
+    elif team_num == "community":
         context3 = {"team": Team_dict["community"]}
         return render(request, "details.html", context3)
-    elif team_num == "Documentation":
+    elif team_num == "documentation":
         context4 = {"team": Team_dict["documentation"]}
         return render(request, "details.html", context4)
 

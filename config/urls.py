@@ -21,5 +21,5 @@ from app.views import home, to_teams
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home),
-    path("teams/<str:team_num>", to_teams),
+    path("<str:team_num>", to_teams),
 ]

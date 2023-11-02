@@ -7,7 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="{% static "styles.css" %}">
 </head>
+
 <body>
+    <div class="bibi">
     <center><nav style="color: tomato; font-size: 100px;background-color:black;width:100%; ">
         Hello {{ name }}!
 
@@ -22,10 +24,11 @@
     <div>
         {% for team in teams%} 
         
-        <center><li><a href="/teams/{{ team }}" style="font-size:40px;">{{ team }}</b></li>
+        <center><li><a href="/{{ team }}" style="font-size:40px;">{{ team }}</b></li>
 
         {% endfor %}
         </center><div>
     <main>{% block content %}{% endblock content %}</main>
+</div>
 </body>
 </html>
