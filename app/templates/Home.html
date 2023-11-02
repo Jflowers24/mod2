@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "styles.css" %}">
+</head>
+<body>
+    <center><nav style="color: tomato; font-size: 100px;background-color:black;width:100%; ">
+        Hello {{ name }}!
+
+
+    </nav></center>
+    <center><h2 style="color: tomato; font-size: 50px; ">
+        <a href="/">BaseCamp's Team Roster</a>
+
+    </center> </h2>
+
+
+    <div>
+        {% for team in teams%} 
+        
+        <center><li><a href="/teams/{{ team }}" style="font-size:40px;">{{ team }}</b></li>
+
+        {% endfor %}
+        </center><div>
+    <main>{% block content %}{% endblock content %}</main>
+</body>
+</html>
