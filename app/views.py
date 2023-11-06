@@ -19,6 +19,15 @@ def home(
     )
 
 
+def parent(
+    request: HttpRequest,
+) -> HttpResponse:
+    return render(
+        request,
+        "parent.html",
+    )
+
+
 @dataclass
 class team:
     Tname: str
